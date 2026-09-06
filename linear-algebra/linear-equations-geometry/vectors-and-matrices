@@ -1,0 +1,68 @@
+## 1.10 Matrix equation form: Ax = b
+
+A system of linear equations can be written compactly as:
+
+```
+Ax = b
+```
+
+- `A` — an `m × n` matrix (coefficients)
+- `x` — the unknown vector, in ℝⁿ
+- `b` — a vector in ℝᵐ
+
+Two central questions this framing sets up:
+- What is the solution set of `Ax = b`?
+- What is the set of *all* `b` for which the system is consistent?
+
+## 1.11 Vectors in ℝⁿ
+
+A vector is determined by its **length and direction**, not its location — it doesn't need to start at the origin. Unless stated otherwise, assume vectors start at the origin. A vector can also be thought of as the difference between two points.
+
+### Vector algebra
+
+**Addition:**
+```
+(a, b, c)ᵀ + (x, y, z)ᵀ = (a+x, b+y, c+z)ᵀ
+```
+
+**Scalar multiplication:**
+```
+c(x, y, z)ᵀ = (cx, cy, cz)ᵀ
+```
+`cv` is called a *scalar multiple* of `v`.
+
+### Geometric interpretation
+
+- **Parallelogram law (addition):** place the tail of `w` at the head of `v`. The sum `v + w` runs from the tail of `v` to the head of `w`. Doing this both ways (v then w, w then v) traces out a parallelogram.
+- **Subtraction:** place the tails of `v` and `w` at the same point. Then `v - w` is the vector from the head of `w` to the head of `v`. (Check: `w + (v - w) = v`.)
+- **Scalar multiplication:** scales the length of `v`, and flips direction if the scalar is negative. The set of all scalar multiples of a nonzero vector `v` is a **line**. The set of all scalar multiples of the zero vector is a single **point**.
+
+## 1.12 Linear combinations
+
+We can add and scale vectors within a single equation — a **linear combination**.
+
+- The linear combination of a single vector traces out a line.
+- Linear combinations of collinear vectors still span only that same line.
+
+## 1.13 Vector equations
+
+A **vector equation** — an equation involving a linear combination of vectors with unknown coefficients — is really an *n*-coordinate vector equation packaged as a single equation, equivalent to *n* ordinary numerical equations.
+
+A linear system can be viewed three equivalent ways:
+1. A system of linear equations
+2. An augmented matrix
+3. A vector equation
+
+Vector equations are a means to an end — they give a more geometric lens on the same systems of equations we're ultimately trying to solve.
+
+## 1.14 Span
+
+The **span** of a set of vectors is the set of *all* linear combinations of those vectors — the subset "spanned" or "generated" by them.
+
+Set-builder notation:
+
+```
+{ x₁v₁ + x₂v₂ + ... + xₖvₖ | x₁, x₂, ..., xₖ ∈ ℝ }
+```
+
+Read as: "the set of all things of the form `x₁v₁ + x₂v₂ + ... + xₖvₖ` such that `x₁, ..., xₖ` are real numbers."
