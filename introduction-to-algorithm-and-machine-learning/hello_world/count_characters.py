@@ -10,14 +10,16 @@ def count_characters(string):
     result = {}
 
     for element in string:
-        counter = 0
-        for char in string:
-            if element == char:
-                counter += 1
+        if element not in result:
+            counter = 0
+            for char in string:
+                if element == char:
+                    counter += 1
 
-        result.update({element: counter})
+            result.update({element: counter})
 
     return result
 
 test = count_characters('A cat!!!')
 print(test)
+
