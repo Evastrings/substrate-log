@@ -6,7 +6,7 @@ def is_prime(N):
     some n ∈ {2,3,4,...,⌊N/2⌋} such that n divides N.
     """
     if N > 1:
-        for n in range(2, (N//2)):
+        for n in range(2, (N//2)+1):
             if N % n == 0:
                 return False
         return True
@@ -19,7 +19,7 @@ def is_prime(N):
 # print(99//10)
 # print(-33//10)
 
-print(is_prime(7))
+print(is_prime(4))
 print(is_prime(51))
 
 print(is_prime(1001))
