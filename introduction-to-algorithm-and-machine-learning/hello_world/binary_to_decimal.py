@@ -4,12 +4,11 @@ def binary_to_decimal(string):
     """
     Take a binary representation of a number and return the decimal representation.
     """
-    index = 1
     result = 0
 
-    for digit in string:
-        calc = int(digit) * (2 ** (len(string) - index))
-        result += calc
+    for index, digit in enumerate(string):
+        exponent = len(string) - index -1
+        result += int(digit) * (2 ** exponent)
         index += 1
 
     return result
