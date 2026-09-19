@@ -41,4 +41,4 @@ hex_c = '7CF'
 dec_c = hexadecimal_to_decimal(hex_c)
 print(f"{hex_c} to decimal is {dec_c}")
 
-print(hexadecimal_to_decimal('ABCDEF'))
+print(hexadecimal_to_decimal('ABCDEFG'))
