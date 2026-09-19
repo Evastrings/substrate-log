@@ -40,13 +40,3 @@ def decimal_to_hexadecimal(string):
         string //= 16
 
     return result
-
-d = '4770'
-h = decimal_to_hexadecimal(d)
-
-print(f" {d} converted to hexadecimal is {h}")
-
-test = ['11259375', '974010', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', 16, '16', '31', '32', '3A4']
-
-for t in test:
-    print(f"{t} in hexadecimal is {decimal_to_hexadecimal(t)}")

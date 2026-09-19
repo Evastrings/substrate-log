@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./introduction-to-algorithm-and-machine-learning/hello_world"
+    ]
+}

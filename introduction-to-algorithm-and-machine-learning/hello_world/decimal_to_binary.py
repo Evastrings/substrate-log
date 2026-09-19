@@ -27,10 +27,3 @@ def decimal_to_binary(string):
         result += reversed_binary[-i]
 
     return result
-
-
-test = ['0', '1', '2', '3', '4', '5', '8', '16', '26', '32', '64', 'a3', 56]
-tests = [2]
-
-for nu in test:
-    print(f"{nu} converted to binary number is {decimal_to_binary(nu)}")

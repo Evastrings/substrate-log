@@ -4,7 +4,9 @@ def binary_to_decimal(string):
     """
     Take a binary representation of a number and return the decimal representation.
     """
-
+    if not isinstance(string, str):
+        return 'Enter a string'
+    
     for digits in string:
         if digits not in ("0", "1"):
             return 'Invalid binary number'
