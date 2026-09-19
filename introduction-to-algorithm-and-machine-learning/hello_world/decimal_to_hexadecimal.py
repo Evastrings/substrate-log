@@ -27,7 +27,7 @@ def decimal_to_hexadecimal(string):
         return 'Enter a String'
     
     for digit in string:
-        if digit not in reversed_hex_dict:
+        if digit not in ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9'):
             return 'Invalid decimal number'
 
     if string == '0':

@@ -5,7 +5,8 @@ def hexadecimal_to_decimal(string):
     Take a hexadecimal representation of a number and return the decimal representation
     """
     
-
+    if not isinstance(string, str):
+        return 'Enter a string'
     string = string.lower()
     result = 0
 
