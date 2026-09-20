@@ -12,9 +12,6 @@ def triple_then_subtract_four(n):
     if n < 1:
         return []
 
-    if n == 1:
-        return terms
-
     while (len(terms) < n):
 
         previous_term = terms[-1]
@@ -23,7 +20,6 @@ def triple_then_subtract_four(n):
 
     return terms
 
-print(triple_then_subtract_four(8))
 
 def triple_then_subtract_four_nth(n):
     """
@@ -32,15 +28,20 @@ def triple_then_subtract_four_nth(n):
     if not isinstance(n, int):
         return 'Invalid integer'
 
-    if n < 1:
-        return 'Enter values greater than 1'
+    if n <= 0:
+        return 'Enter values greater than 0'
 
     if n == 1:
         return 5
 
     return triple_then_subtract_four_nth(n - 1) * 3 - 4
 
-print("=== Testing the nth term function ===")
+if __name__ == '__main__':
+    print(triple_then_subtract_four(8))
 
-for i in range(-1, 8):
-    print(f" The {i}th term of this sequence is {triple_then_subtract_four_nth(i)}")
+    print("=== Testing the nth term function ===")
+    for i in range(-1, 8):
+        print(f" The {i}th term of this sequence is {triple_then_subtract_four_nth(i)}")
+
+    print(triple_then_subtract_four('2'))
+    print(triple_then_subtract_four_nth('w'))
