@@ -26,7 +26,7 @@ def triple_then_subtract_four_nth(n):
     Returns the nth term of the 'triple_then_subtract_four' function
     """
     if not isinstance(n, int):
-        return 'Invalid integer'
+        return 'Invalid Integer'
 
     if n <= 0:
         return 'Enter values greater than 0'
