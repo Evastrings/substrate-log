@@ -1,10 +1,8 @@
-# a function that checks if a string is symettric
+"""This function that check if a string is symettric."""
 
 def check_if_symmetric(string):
-    """
-    returns True if the input string is symmetric,
-    returns False if not
-    """
+    """returns True if the input string is symmetric,
+    returns False if not"""
 
     #ignoring capitalization
     string = string.lower()
@@ -13,12 +11,4 @@ def check_if_symmetric(string):
         reversed_string += string[-i]
 
     return string == reversed_string
-
-# print(check_if_symmetric("Civic"))
-
-# print("==second==")
-# print(check_if_symmetric('!ab123 4 321ba!'))
-# print(check_if_symmetric("batman"))
-# print(check_if_symmetric("racecar"))
-# print(check_if_symmetric(''))
 

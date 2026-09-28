@@ -46,12 +46,19 @@ for v in count:
 print(f" This is the value of the distribution after test {n_dist}")
 
 print("=====TEST CASE FOR SEVERAL DISTRIBUTIONS====")
-tests = [[0.9, 0.1], [0.3, 0.2, 0.7], [0.5, 0.5], [0.2, [0.7], '2'], [0.1, 0.2, 0.3, 0.4]]
+tests = [[0.9, 0.1], [0.3, 0.2, 0.7], [0.5, 0.5], [0.2, 0.7, '2'], [0.1, 0.2, 0.3, 0.4]]
 for test in tests:
-    counter = [0, 0, 0, 0]
+    print(f"beginning of loop, this is test {test}")
+    counter = []
+    for j in test:
+        counter.append(0)
     for i in range(10000):
         index = random_draw(test)
-        counter[index] += 1
+        if not isinstance(index, int):
+            print(f"This test {test} failed and returned {index}")
+            break
+        else:
+            counter[index] += 1
     print(f" the distribution of {test} after the random draw distribution is {counter}")
     distro = []
     for new in counter:

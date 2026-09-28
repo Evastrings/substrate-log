@@ -31,7 +31,7 @@ def collatz_sequence_instance_nth(n):
         return 'Invalid Integer'
 
     if n < 1:
-        return 'n must be greater than 1'
+        return 'n must be at least 1'
 
     if n == 1:
         return 25

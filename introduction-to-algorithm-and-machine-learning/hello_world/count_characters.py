@@ -20,6 +20,3 @@ def count_characters(string):
 
     return result
 
-test = count_characters('A cat!!!')
-print(test)
-

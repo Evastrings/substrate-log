@@ -20,3 +20,13 @@ def double_then_add_one(n):
 #     print(double_then_add_one(i))
 
 print(double_then_add_one(8))
+# def double_then_add_one(n):
+    
+#     if not isinstance(n, int):
+#         return 'Enter an integer'
+#     if n <= 0:
+#         return 'Enter a number greater than 0'
+#     if n == 1:
+#         return 3
+
+#     return double_then_add_one(n - 1) * 2 + 1
