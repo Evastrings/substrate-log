@@ -88,7 +88,7 @@ Thus,
 **Projection onto a line:**
 
 ```math
-\operatorname{proj}_w(v) = \frac{w^T v}{w^T w}\, w
+\text{proj}_w(v) = \frac{w^T v}{w^T w}\, w
 ```
 
 ### Important intuition
@@ -235,7 +235,7 @@ Gram-Schmidt removes this overlap by constructing an orthonormal basis spanning 
 Normalize the first basis vector:
 
 ```math
-q_1 = \frac{a_1}{\lVert a_1 \rVert}.
+q_1 = \frac{a_1}{\| a_1 \|}.
 ```
 
 Project $`a_2`$ onto $`q_1`$:
@@ -253,7 +253,7 @@ u_2 = a_2 - (q_1^T a_2)\, q_1.
 Normalize:
 
 ```math
-q_2 = \frac{u_2}{\lVert u_2 \rVert}.
+q_2 = \frac{u_2}{\| u_2 \|}.
 ```
 
 **Verification:**
