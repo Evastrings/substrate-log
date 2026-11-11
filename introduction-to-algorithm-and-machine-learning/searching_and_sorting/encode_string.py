@@ -43,14 +43,16 @@ def encode_string(string, a, b):
     result = []
 
     for letter in string:
+        if letter not in ALPHABET:
+            return 'Invalid Character'
         new_letter_code = ALPHABET[letter] * a + b
         result.append(new_letter_code)
 
     return result
 
-test_string = 'a dog'
+# test_string = 'a dog'
 
-test_string2 = 'unmei datte akiramezu ni kaete miseru'
+# test_string2 = 'unmei datte akiramezu ni kaete miseru'
 
 # tests = ['a dog', 'erande date a live', 'unmei datte akiramezu ni kaete miseru', 'its just so peak']
 
@@ -60,8 +62,8 @@ test_string2 = 'unmei datte akiramezu ni kaete miseru'
 #     encode = encode_string(test, 1, 0)
 #     print(f" encoded string '{test}' is {encode}")
 
-tests_v2 = [['a cat', 'x', 0], ['spread wings', 1, 1], [' abcdefg', 1, 0], [5, '4', 4]]
+# tests_v2 = [['a cat', 'x', 0], ['spread wings', 1, 1], [' abcdefg', 1, 0], [5, '4', 4]]
 
-for test in tests_v2:
-    encode = encode_string(test[0], test[1], test[2])
-    print(f" encoded string '{test[0]}' is {encode}")
+# for test in tests_v2:
+#     encode = encode_string(test[0], test[1], test[2])
+#     print(f" encoded string '{test[0]}' is {encode}")
