@@ -36,8 +36,11 @@ def decode_numbers(numbers, a, b):
     returns the message if true, otherwise returns false
     """
 # all(isinstance(v, int) for v in [a, b])
-    if not all(isinstance(number, int) for number in numbers) and all(isinstance(v, int) for v in [a, b]):
+    if not all(isinstance(number, int) for number in numbers):
         return 'Invalid Integer'
+    if not all(isinstance(v, int) for v in [a, b]):
+        return 'Invalid Integer'
+    
     if a == 0:
         return 'a cannot be 0'
 
