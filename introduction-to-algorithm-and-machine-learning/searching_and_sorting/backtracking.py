@@ -96,7 +96,7 @@ for a in digits:
                                 if a == h or b == h or c == h or d == h or e == h or f == h or g == h:
                                     continue
                                 square[2][1] = h
-                                square[2][2]
+                                square[2][2] = None
                                 if is_hopeless(square):
                                     continue
                                 for i in digits:
