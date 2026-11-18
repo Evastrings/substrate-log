@@ -19,7 +19,7 @@ precision = 1e-6
 print(precision * 1000)
 
 midpoint = (upper_bound + lower_bound) / 2
-prev_midpoint = 0
+# prev_midpoint = 0
 
 while ((abs(upper_bound - lower_bound) / 2) > precision):
     
@@ -29,7 +29,7 @@ while ((abs(upper_bound - lower_bound) / 2) > precision):
     else:
         lower_bound = midpoint
     
-    prev_midpoint = midpoint
+    # prev_midpoint = midpoint
     midpoint = (upper_bound + lower_bound) / 2
 
 print(f"The cuberoot of 2 is {round(midpoint, 6)}")
