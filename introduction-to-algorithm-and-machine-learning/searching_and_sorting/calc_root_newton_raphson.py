@@ -7,8 +7,11 @@ def function_x(x, a, n):
     return (x ** n) - a
 
 def newton_step(x_guess, a, n):
-    derivate_x_guess = derivative(x_guess, n)
-    result = (x_guess * derivate_x_guess - function_x(x_guess, a, n)) / derivate_x_guess
+    derivative_at_guess = derivative(x_guess, n)
+
+    if derivative_at_guess == 0:
+        raise ValueError("Derivative is Zero")
+    result = (x_guess * derivative_at_guess - function_x(x_guess, a, n)) / derivative_at_guess
     return result
 
 def calc_root_newton_raphson(a, n, precision):
@@ -22,7 +25,15 @@ def calc_root_newton_raphson(a, n, precision):
     if a == 1 and n != 0:
         return 1
 
-    old_guess = 42
+    if a < 0 and n % 2 == 0:
+        raise ValueError("no real roots")
+    if a >= 1:
+        old_guess = a
+    elif a > 0:
+        old_guess = 1
+    else:
+        old_guess = -1
+
     new_guess = newton_step(old_guess, a, n)
 
     while(abs(new_guess - old_guess) > precision):
@@ -32,7 +43,7 @@ def calc_root_newton_raphson(a, n, precision):
     return new_guess
 
 
-test = calc_root_newton_raphson(-4, 2, 1e-6)
+test = calc_root_newton_raphson(100, 2, 1e-6)
 
 print(test)
 
